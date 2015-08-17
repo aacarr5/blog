@@ -17,6 +17,11 @@ class PostsController < ApplicationController
   end
 
  	def create
+    #FOR API's! 
+    # raw_parameters = { :email => "john@example.com", :name => "John", :admin => true }
+    # parameters = ActionController::Parameters.new(raw_parameters)
+    # user = User.create(parameters.permit(:name, :email))
+
     @post = Post.new(post_params)
  
     if @post.save
